@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Voto Popular - Equipe | Empreenda Senac 17º Edição</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://empreenda.digito1.com.br/hotsite/assets/css/bootstrap.min.css"
+          rel="stylesheet"
+          type="text/css" />
+
+    <!-- Font Awesome CSS -->
+    <link href="https://empreenda.digito1.com.br/hotsite/assets/css/font-awesome.min.css"
+          rel="stylesheet"
+          type="text/css" />
+
+    <link href="https://empreenda.digito1.com.br/hotsite/assets/css/flickity.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://empreenda.digito1.com.br/hotsite/assets/css/magnific-popup.css"
+          rel="stylesheet"
+          type="text/css" />
+    <!-- BG Video - YouTube -->
+    <!--<link href="~/hotsite/assets/css/jquery.mb.YTPlayer.min.css"
+          rel="stylesheet"
+          type="text/css" />-->
+    <!-- Theme CSS -->
+    <link href="https://empreenda.digito1.com.br/hotsite/assets/css/theme.css" rel="stylesheet" type="text/css" />
+    <link href="https://empreenda.digito1.com.br/hotsite/assets/css/style.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ETJE9HQY26"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ETJE9HQY26');
+    </script>
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 3917259, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+</head>
+<body id="page-top">
+
+<form action="https://empreenda.digito1.com.br/VotoPopular/Voto/1303" method="post">    <section id="voto-popular" style="margin-top:140px">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 text-center">
+                            <p class="font-alt font-w-600 letter-spacing-2 text-uppercase title-xs-small title-extra-large-2 text-white">
+                                PROJETO: Crescendo Juntos
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 text-center">
+                            <p class="font-alt mb-0 mt-3 text-xs-large text-uppercase title-medium text-pink">
+                                Categoria: Programa Educação para o Trabalho e Programa Senac de Aprendizagem
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/8n6ULYY5S_A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="col-md-6">
+                    <p class="font-alt mb-0 mt-3 text-xs-large text-white">
+                        <strong>Equipe:</strong> Sunshine<br />
+                        <strong>Unidade:</strong> Senac Sorocaba<br /><br />
+                        <strong>Integrante(s):</strong>  Adriana Vitor dos Santos<br /><br />
+                        <a class="btn btn-base-pink btn-medium" onclick="votacao(1303,'Programa Educa&#231;&#227;o para o Trabalho e Programa Senac de Aprendizagem','Sunshine')" role="button">VOTAR NA ADRIANA</a><br /><br />
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="height:40px"></div>
+            </div>
+
+        </div>
+    </section>
+    <div class="modal inmodal" id="VotacaoEquipes" tabindex="-1" role="dialog" aria-hidden="true" style="z-index:1080 !important">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title">VOTO POPULAR</h4><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                </div>
+                <div class="modal-body" style="font-size:16px;">
+
+                    Você confirma o seu voto para a equipe <strong><span id="lblEquipe"></span></strong> da categoria <strong><span id="lblCategoria"></span></strong>?
+                    <span id="lblId" style="display:none"></span>
+                    <br /><br />
+
+                    <p id="warning-email" style="font-weight:bold; color:red"></p>
+                    <!-- <strong class="text-pink">*</strong> Indique seu e-mail: -->
+                    <input class="form-control" data-rule-email="true" id="Email" maxlength="100" name="Email" placeholder="exemplo: email@gmail.com" required="required" type="email" value="" hidden="" />
+                    <br />
+                    <div id="divCheck">
+                        <input type="checkbox" id="chkAceite" onclick="AceitaEmailChk()" checked hidden> <strong class="text-pink">*</strong>Obrigado pelo seu VOTO!
+                        <br />
+                        <input data-val="true" data-val-required="The AceitaEmail field is required." id="AceitaEmail" name="AceitaEmail" type="checkbox" value="true" checked hidden /><input name="AceitaEmail" type="hidden" value="false" /> Agradecemos
+                    </div>
+                    <div id="divSoma">
+                        <br />
+                        <strong class="text-pink">*</strong> Para confirmar sua votação, clique no campo abaixo  <strong style="font-size:22px">
+                            <br />
+                            <span id="valor1"></span> + <span id="valor2"></span>
+                        </strong><br />
+                        <input id="totalvalores" class="input-form" type="text" name="totalvalores" required="" style="width:30%"  onclick="calcularTotal()">
+                    </div>
+
+                    <p id="warning-message" style="font-weight:bold; color:red"></p>
+                    <div id="html_element"></div>
+                    <p>
+                        <br />
+                        <input class="form-control" data-val="true" data-val-number="O campo IdVot deve ser um número." data-val-required="The IdVot field is required." id="IdVot" name="IdVot" style="display: none;" type="text" value="0" />
+                        <button type="button" class="btn btn-base-pink btn-medium" id="btEnviar" onclick="enviar()">CONFIRMO MEU VOTO NA ADRIANA</button>
+                    </p>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-base-pink btn-small btn-shadow mr-0 mt-4" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+    <!-- Main JS -->
+    <script data-cfasync="false" src="https://empreenda.digito1.com.br/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://empreenda.digito1.com.br/hotsite/assets/js/jquery.min.js"></script>
+    <script src="https://empreenda.digito1.com.br/hotsite/assets/js/bootstrap.min.js"></script>
+    <script src="https://empreenda.digito1.com.br/hotsite/assets/js/popper.min.js"></script>
+
+    <!-- Include all js plugins (below) -->
+    <script src="https://empreenda.digito1.com.br/hotsite/assets/js/pace.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="https://empreenda.digito1.com.br/hotsite/assets/js/theme.js"></script>
+    
+    <script src="./hotsite/assets/js/copylink.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
+</body>
+</html>
